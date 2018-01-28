@@ -1,0 +1,301 @@
+/* Default Styles */
+
+body {
+  margin: 0;
+  font-family: 'Raleway';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*Give them all 100% for mobile first*/
+
+.full,
+.one-third,
+.two-thirds,
+.one-fourth,
+.half {
+  width: 100%;
+}
+
+/* Navigation Styles */
+#navigation {
+  height: 70px;
+  background: #262626;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
+}
+
+#navigation .brand {
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+#navigation .brand a,
+#navigation .brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#navigation nav {
+  float: right;
+}
+
+/* Mobile navigation */
+
+#navigation nav .nav-mobile {
+  position: relative;
+}
+
+#navigation .nav-mobile .burger-line,
+#navigation .nav-mobile .burger-line:before,
+#navigation .nav-mobile .burger-line:after {
+  border-radius: 50px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#navigation .nav-mobile .burger-line {
+  right: 20px;
+  top: 33px;
+}
+
+#navigation .nav-mobile .burger-line:before {
+  top: -10px;
+}
+
+#navigation .nav-mobile .burger-line:after {
+  top: 10px;
+}
+
+#navigation .nav-mobile .burger-line .mobile-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #262626;
+  padding: 20px;
+  text-align: center
+}
+
+#navigation:hover .nav-mobile .burger-line .mobile-menu {
+  display: block;
+}
+
+#navigation .nav-mobile .burger-line .mobile-menu .mobile-item {
+  line-height: 30px;
+  background: #262626;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*WebApp Navigation*/
+
+#navigation nav .nav-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation nav .nav-list li {
+    float: left;
+}
+
+#navigation nav .nav-list li a,
+#navigation nav .nav-list li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+#navigation nav .nav-list li a:hover {
+  background: #2581DC;
+}
+
+/* Filler Section */
+
+#filler {
+  height: 70px;
+}
+
+/* Hero Section */
+
+#hero img {
+  width: 100%;
+}
+
+/* Main Section */
+
+#main .content {
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+#main .content h2 {
+  font-size: 32px;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#main .content .paragraph {
+  font-size: 16px;
+  color: #7e7e7e;
+  line-height: 1.5;
+  letter-spacing: .3px;
+}
+
+#main .content .btn {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #f93939;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#main .image img {
+  display: block;
+  width: 100%;
+  box-shadow: 0 4px 50px rgba(0,0,0,0.25);
+}
+
+/* What We Teach */
+
+#teach {
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+}
+
+#teach h2 {
+  font-size: 32px;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#teach p {
+  margin: 20px auto;
+  width: 90%;
+}
+
+#teach .image-container {
+  padding: 20px;
+}
+
+#teach .image-container img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+/* Styles larger than mobile*/
+
+@media only screen and (min-width: 768px) {
+  .full {
+    width: 100%;
+  }
+
+  .half {
+    width: 50%;
+  }
+
+  .one-third {
+    width: 33.33%;
+  }
+
+  .one-fourth {
+    width: 25%;
+  }
+
+  .two-thirds {
+    width: 66%;
+  }
+
+  .column {
+    float: left;
+  }
+
+  #navigation nav .nav-list {
+    display: block;
+  }
+
+  #navigation nav .nav-mobile {
+    display: none;
+  }
+
+  #main {
+    padding: 40px;
+  }
+
+  #main .content {
+    padding-right: 70px;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  #main .image img {
+    margin-top: 50px
+  }
+
+  #teach {
+    padding: 50px;
+    text-align: center;
+  }
+
+  #teach p {
+    margin: 20px auto;
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #main {
+    padding: 70px;
+  }
+
+  #main .content {
+    padding-right: 100px;
+    margin-bottom: 0;
+  }
+
+  #main .image img {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #main {
+    padding: 100px;
+  }
+
+  #main .content {
+    padding-right: 200px;
+    margin-bottom: 0;
+  }
+}
